@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('js.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  header {
+    background-color: #f8eb30;
+    color: #000000;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.685)
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  
+  }
+  
+  nav a {
+      color: rgb(252, 252, 252);
+      padding: 1.5rem;
+      background-color: rgb(255, 18, 18);
+      margin: auto;
+     
+  }
+  
+  main {
+    max-width: 600px;
+    margin: 2.5rem;
+    background-color: #0bf8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0)
+  }
+  
+  .lesson {
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem;
+  }
+  
+  .lesson-content {
+    display: none;
+    margin-top: 1rem;
+  }

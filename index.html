@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="JAVASCRIPT - STYLE.css">
+ <title>JavaScript Lessons</title>
+</head>
+<body>
+
+<header>
+<h1>JavaScript Lessons</h1>
+<nav>
+<a href="#" onclick="showPage('home')">Home</a>
+<a href="#" onclick="showPage('lessons')">Lessons</a>
+<a href="#" onclick="showPage('about')">About</a>
+</nav>
+</header>
+
+<main id="content">
+<!-- Content will be dynamically loaded here -->
+</main>
+
+<script>
+function showPage(page) {
+ var content = document.getElementById('content');if (page === 'home') {
+content.innerHTML = `
+<h2 align="center">Welcome to Our Webpage</h2>
+<ol>
+<li>Click The Lessons to see all javaScript Lessons.</li>
+<li>Click About to view the members of this project.</li>
+</ol>
+<hr>
+<h4 align="center">This is created by the ACT-2B Group 3.</h4> `;
+
+} else if (page === 'lessons') {
+content.innerHTML = `
+<h2 align="center"><font color=gray>Click the Lesson you want to view:</font></h2>
+ <hr>
+
+ <div class="lesson" onclick="toggleLesson('lesson1')">
+ <h2>Lesson 1: Introduction to JavaScript</h2>
+</div>
+<div id="lesson1" class="lesson-content">
+<p>Lesson 1 here....</p>
+<p> JavaScript is a popular programming language 
+that has a wide range of applications.</p>
+<p> JavaScript was previously used mainly for making 
+webpages interactive such as form validation, 
+animation, etc. Nowadays, JavaScript is also used 
+in many other areas such as server-side 
+development, mobile app development and so 
+on. </p>
+</div>
+
+<div class="lesson" onclick="toggleLesson('lesson2')">
+<h2>Lesson 2: Variables and Data Types</h2>
+</div>
+<div id="lesson2" class="lesson-content">
+<p>Lesson 2 here....</p>
+<p> It acts as a container that holds data that can 
+be used and manipulated throughout a 
+program. Variables are fundamental to 
+programming, allowing developers to store and 
+manage data dynamically </p>
+</div>
+
+<div class="lesson" onclick="toggleLesson('lesson3')">
+ <h2>Lesson 3: Operators</h2>
+</div>
+<div id="lesson3" class="lesson-content">
+<p>Lesson 3 here....</p>
+<p> Types of JavaScript Operators </p>
+<p> There are different types of JavaScript operators: </p>
+
+<p> Arithmetic Operators </p> 
+<p> Assignment Operators </p>
+<p> Comparison Operators </p>
+<p> String Operators </p>
+<p> Logical Operators </p>
+<p> Bitwise Operators </p>
+<p> Ternary Operators </p>
+ </div>
+
+<div class="lesson" onclick="toggleLesson('lesson4')">
+<h2>Lesson 4: Conditional statements</h2>
+</div>
+<div id="lesson4" class="lesson-content">
+<p>Lesson 4 here....</p>
+<p> Conditional statements in JavaScript are used to
+make decisions in your code based on specific
+conditions. These statements allow you to control the
+flow of your program, executing different blocks of
+code depending on whether a condition is true or
+false.</p>
+<p>JavaScript if...else Statement</p>
+<p>In computer programming, there may arise situations where you have to run a block of code among more than one alternatives. For example, assigning grads A, B or C based on marks obtained by a student.
+In such situations, you can use the JavaScript if...else statement to create a program that can make decisions.</p>
+<p>In JavaScript, there are three forms of the if...else statement.</p>
+<p>1. if statement</p>
+<p>2. if...else statement</p>
+<p>3. if...else if...else stitement</p>
+</div>
+`;
+ } else if (page === 'about') {
+content.innerHTML = `
+<h2 align="center">Group Members:</h2>
+<font color=black>
+<center>
+<p>ESPANILLA, DANIEL R.</p>
+<p>LEYNES, LUCKY</p>
+<p>ABARIENTOS, LENARD</p>
+<p>OBERO, PATRICK</p>
+<p>MORCILLA, JEREMY</p>
+<p>REPERIAL, APRIL</p>
+<p>MALDONADO, AERON</p>
+<p>VICENTE, MARLENE</p>
+<p>CARANDANG, BENEDICT</p>
+<p>SILVA, JOANNE</p>
+<p>RELUAW, CRISHELLE</p>
+<p>MANALO, FREDERICK</p>
+<p>LUNAR, PRINCESS DIANNE</p>
+<p>MACANDILI, ANDREI</p>
+</font></center>
+<hr>
+<h3>If you have a question just chat me on my fb acount<br><br><center><i>fb link:<a class="fb-link" href="https://web.facebook.com/danielstephen.reductoespanilla/"><u>DANIEL ESPANILLA</i></u></center></a></h3>
+`;
+}
+ }
+
+ function toggleLesson(lessonId) {
+var lessonContent = document.getElementById(lessonId);
+lessonContent.style.display = (lessonContent.style.display === 'none') ? 'block' : 'none';
+}
+</script>
+
+<!-- Show home page by default -->
+<script>
+showPage('home');
+</script>
+
+</body>
+</html>
